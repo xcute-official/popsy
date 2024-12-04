@@ -1,6 +1,6 @@
 "use client";
 
-import { SIZE_SM, SIZE_XS } from "@/app/constants/classConstants";
+import { SIZE_SM } from "@/app/constants/classConstants";
 import clsx from "clsx";
 import { useState } from "react";
 import { TbMoon, TbSun } from "react-icons/tb";
@@ -17,12 +17,12 @@ const ThemeToggle = () => {
       {
         theme==='dark'?(
           <div className="flex items-center gap-2">
-            <TbSun className={clsx(SIZE_XS)} />
+            <TbSun className={clsx(SIZE_SM)} />
             <span>light</span>
           </div>
         ):(
           <div className="flex items-center gap-2">
-            <TbMoon className={clsx(SIZE_XS)} />
+            <TbMoon className={clsx(SIZE_SM)} />
             <span>dark</span>
           </div>
         )

@@ -5,7 +5,7 @@ import clsx from "clsx";
 import Link from "next/link";
 import { FiHexagon, FiHome } from "react-icons/fi";
 import ThemeToggle from "./ThemeToggle";
-import UserNav from "./UserNav";
+import UserPrimeNav from "./UserPrimeNav";
 
 interface Page {
   text: string;
@@ -25,7 +25,7 @@ const pages: Page[]=[
 
 const PrimeNav = () => {
   return (
-    <nav>
+    <nav className="flex items-center justify-between w-full">
       <div className="flex items-center gap-2">
         <FiHexagon className={clsx(
           SIZE_SM
@@ -34,11 +34,11 @@ const PrimeNav = () => {
       </div>
       <div className="flex items-center gap-8">
         <ThemeToggle />
-        <UserNav />
+        <UserPrimeNav />
         <ul>
           {
             pages.map((page: Page, index: number)=>(
-              <li>
+              <li key={index}>
                 <Link href={page.href}>
                   <div className="flex items-center gap-2">
                     <span>{page.text}</span>

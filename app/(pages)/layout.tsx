@@ -6,6 +6,7 @@ import type { Metadata } from "next"
 import PrimeNav from "./_components/PrimeNav";
 import clsx from "clsx";
 import { SIDE_GAP } from "../constants/classConstants";
+import './globals.css';
 
 
 
@@ -23,10 +24,10 @@ export const metadata: Metadata = {
 const layout = ({children}: LayoutProps) => {
   return (
     <html data-theme="light">
-      <body>
+      <body className="bg-background text-foreground">
         <div className="fixed top-0 left-0 w-screen">
           <div className={clsx(
-            'w-full h-[10vh]',
+            'w-full h-[10vh] flex items-center',
             SIDE_GAP
           )}>
             <PrimeNav />

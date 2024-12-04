@@ -14,3 +14,9 @@
         --color-background: #ffffff;
     }
 }
+
+
+
+input, textarea {
+    @apply bg-transparent text-foreground
+}
